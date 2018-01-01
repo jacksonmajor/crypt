@@ -89,18 +89,6 @@
 		    50% { color: blue; }
 		    100% { color: red; }
 		}
-		#preloader {
-		    position: fixed;
-		    width: 100%;
-		    height: 100%;
-		    z-index: 999;
-		    overflow: visible;
-		    background: url('assets/images/nyancat.gif') no-repeat center center;
-		 }
-
-		#content {
-		    display: none;
-		}
 	</style>
 </head>
 <body>
@@ -118,27 +106,12 @@
 	</div>
 </div>
 <script>
-var preloader;
+loading_gif = new Image();
+loading_gif.src = 'assets/images/nyancat.gif';
 
-function preload(opacity) {
-    if(opacity <= 0) {
-        showContent();
-    }
-    else {
-        preloader.style.opacity = opacity;
-        window.setTimeout(function() { preload(opacity - 0.05) }, 100);
-    }
-}
-
-function showContent() {
-    preloader.style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    preloader = document.getElementById('preloader');
-    preload(1);
-});
+loading_gif.onload = function () {
+    // start loading your page (or loading animation)
+};
 </script>
 </body>
 </html>
