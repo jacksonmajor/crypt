@@ -92,9 +92,25 @@
 	</style>
 </head>
 <body>
-<div id="preloader"></div>
-	<div id="content">
-	<div class="cssmeme">
+<div class="hidden">
+	<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"https://jacksonmajor.github.io/crypt/assets/images/nyancat.gif",
+				"https://jacksonmajor.github.io/crypt/assets/images/nyancat.gif",
+				"https://jacksonmajor.github.io/crypt/assets/images/nyancat.gif"
+			)
+		//--><!]]>
+	</script>
+</div>	
+<div class="cssmeme">
 		<p id="meme">Css<br>
 		is<br>
 		awesome</p>
@@ -105,13 +121,5 @@
 	<img id="second" src="assets/images/meme.png" ondragstart="return false;">
 	</div>
 </div>
-<script>
-loading_gif = new Image();
-loading_gif.src = 'assets/images/nyancat.gif';
-
-loading_gif.onload = function () {
-    // start loading your page (or loading animation)
-};
-</script>
 </body>
 </html>
