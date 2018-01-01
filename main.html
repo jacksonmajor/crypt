@@ -89,21 +89,23 @@
 		    50% { color: blue; }
 		    100% { color: red; }
 		}
-		.spinner-wrapper {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #ff6347;
-		z-index: 999999;
+		#preloader {
+		    position: fixed;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 999;
+		    overflow: visible;
+		    background: url('https://www.sstnet.com.br/img/preload.gif') no-repeat center center;
+		 }
+
+		#content {
+		    display: none;
 		}
 	</style>
 </head>
 <body>
-<div class="spinner-wrapper">
-	<div class="spinner"></div>
-</div>
+<div id="preloader"></div>
+	<div id="content">
 	<div class="cssmeme">
 		<p id="meme">Css<br>
 		is<br>
@@ -114,18 +116,29 @@
 	<img src="assets/images/fist.jpg" ondragstart="return false;"><br>
 	<img id="second" src="assets/images/meme.png" ondragstart="return false;">
 	</div>
-</body>
+</div>
 <script>
-jQuery(document).ready(function() {
-//Preloader
-jQuery(window).load(function() {
-preloaderFadeOutTime = 500;
-function hidePreloader() {
-var preloader = jQuery('.spinner-wrapper');
-preloader.fadeOut(preloaderFadeOutTime);
+var preloader;
+
+function preload(opacity) {
+    if(opacity <= 0) {
+        showContent();
+    }
+    else {
+        preloader.style.opacity = opacity;
+        window.setTimeout(function() { preload(opacity - 0.05) }, 100);
+    }
 }
-hidePreloader();
-});
+
+function showContent() {
+    preloader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    preloader = document.getElementById('preloader');
+    preload(1);
 });
 </script>
+</body>
 </html>
