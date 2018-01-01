@@ -116,12 +116,12 @@
 	</div>
 
 <script>
-$(document).ready(function() {
+jQuery(document).ready(function() {
 //Preloader
-$(window).load(function() {
+jQuery(window).load(function() {
 var preloaderFadeOutTime = 500;
 function hidePreloader() {
-var preloader = $('.spinner-wrapper');
+var preloader = jQuery('.spinner-wrapper');
 var preloader.fadeOut(preloaderFadeOutTime);
 }
 hidePreloader();
