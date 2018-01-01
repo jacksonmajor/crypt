@@ -3,6 +3,7 @@
 <head>
 	<title>!IMPORTANT DOES NOT FIX YOUR BAD CSS</title>
 	<link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon1.png' />
+	<link rel="stylesheet" type="text/css" href="assets/css/preloader.css">
 	<meta charset="utf-8">
 
 	<style>
@@ -88,9 +89,38 @@
 		    50% { color: blue; }
 		    100% { color: red; }
 		}
+		.spinner-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ff6347;
+		z-index: 999999;
+		}
+		position: absolute;
+top: 48%;
+left: 48%;
 	</style>
 </head>
 <body>
+<div class="spinner-wrapper">
+	<div class="spinner"></div>
+</div>
+<div class="sk-circle">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
 	<div class="cssmeme">
 		<p id="meme">Css<br>
 		is<br>
@@ -101,5 +131,19 @@
 	<img src="assets/images/fist.jpg" ondragstart="return false;"><br>
 	<img id="second" src="assets/images/meme.png" ondragstart="return false;">
 	</div>
+
+<script>
+$(document).ready(function() {
+//Preloader
+$(window).load(function() {
+preloaderFadeOutTime = 500;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+});
+</script>
 </body>
 </html>
