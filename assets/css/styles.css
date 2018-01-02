@@ -20,7 +20,7 @@ body {
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url('https://jacksonmajor.github.io/crypt/assets/images/loading.gif'); /* path to your loading animation */
+	background-image:url('https://cdn.dribbble.com/users/1352409/screenshots/3500583/main_wave_circle.2.gif'); /* path to your loading animation */
 	background-repeat:no-repeat;
 	background-position:center;
 	margin:-100px 0 0 -100px; /* is width and height divided by two */
