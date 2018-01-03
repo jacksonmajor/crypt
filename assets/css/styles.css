@@ -10,7 +10,7 @@ body {
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#fff; /* change if the mask should be a color other than white */
+	background-color:#000; /* change if the mask should be a color other than white */
 	z-index:99;
 }
 
@@ -20,8 +20,7 @@ body {
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url('https://jacksonmajor.github.io/crypt/assets/images/status.gif'); /* path to your loading animation */
-	background-repeat:no-repeat;
-	background-position:center;
-	margin:-100px 0 0 -100px; /* is width and height divided by two */
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
 }
