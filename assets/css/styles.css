@@ -15,8 +15,8 @@ body {
 }
 
 img#status {
-	width:200px;
 	height:200px;
+	width:200px;
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
